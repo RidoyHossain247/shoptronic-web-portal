@@ -11,9 +11,11 @@ import Profile from './Profile'
 
 
 
-const Header = () => {
+const Header = ({ headerHight }) => {
+
+
   return (
-    <Box boxShadow={1}>
+    <Box boxShadow={1} ref={headerHight}>
       <Container>
         <HeaderTopWrapper>
           <Logo />
