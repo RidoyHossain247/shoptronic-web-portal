@@ -1,9 +1,19 @@
-import { Box } from '@mui/material'
-import React, { useEffect, useState } from 'react'
-import Footer from './Footer'
-import Header from './Header'
+import { Box } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import Footer from './Footer';
+import Header from './Header';
 
-const Layout = ({ children }: any) => {
+interface iProps {
+  children: any;
+  headerHight: any;
+  footerHight: any;
+  headerHightId: string;
+  footerHightId: string;
+  headerOffsetHeight: number;
+  footerOffsetHeight: number;
+}
+
+const Layout: React.FC<iProps> = ({ children }): JSX.Element => {
 
   const [headerOffsetHeight, setHeaderOffsetHeight] = useState(0)
   const [footerOffsetHeight, setFooterOffsetHeight] = useState(0)
@@ -14,12 +24,9 @@ const Layout = ({ children }: any) => {
   useEffect(() => {
     const headerHight = document.getElementById(headerHightId)
     const footerHight = document.getElementById(footerHightId)
-    setHeaderOffsetHeight(headerHight?.offsetHeight)
-    setFooterOffsetHeight(footerHight?.offsetHeight)
+    setHeaderOffsetHeight(headerHight.offsetHeight)
+    setFooterOffsetHeight(footerHight.offsetHeight)
   }, [])
-
-  console.log(headerOffsetHeight)
-  console.log(footerOffsetHeight)
 
   return (
     <>

@@ -1,7 +1,9 @@
 import { Box, Container, Typography, styled } from "@mui/material"
 import React from "react"
 
-const Footer = ({ footerHightId }) => {
+
+
+const Footer = ({ footerHightId }: { footerHightId: string }) => {
   return (
     <Box id={footerHightId} borderTop={'1px solid #413333'}>
       <Container>

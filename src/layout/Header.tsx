@@ -8,7 +8,7 @@ import SearchBar from '../components/ui/SearchBar'
 import MenuList from './MenuList'
 import Profile from './Profile'
 
-const Header = ({ headerHightId }) => {
+const Header = ({ headerHightId }: { headerHightId: string }) => {
 
   return (
     <Box boxShadow={1} id={headerHightId}>
