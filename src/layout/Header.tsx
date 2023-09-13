@@ -1,21 +1,17 @@
 import { Box, Container, Stack, styled } from '@mui/material'
 import React from 'react'
-import CartIcon from '../../components/svg-component/CartIcon'
-import FevaretIcon from '../../components/svg-component/FevaretIcon'
-import UserIcon from '../../components/svg-component/UserIcon'
-import Logo from '../../components/ui/Logo'
-import SearchBar from '../../components/ui/SearchBar'
+import CartIcon from '../components/svg-component/CartIcon'
+import FevaretIcon from '../components/svg-component/FevaretIcon'
+import UserIcon from '../components/svg-component/UserIcon'
+import Logo from '../components/ui/Logo'
+import SearchBar from '../components/ui/SearchBar'
 import MenuList from './MenuList'
 import Profile from './Profile'
 
-
-
-
-const Header = ({ headerHight }) => {
-
+const Header = ({ headerHightId }) => {
 
   return (
-    <Box boxShadow={1} ref={headerHight}>
+    <Box boxShadow={1} id={headerHightId}>
       <Container>
         <HeaderTopWrapper>
           <Logo />
@@ -38,13 +34,9 @@ const Header = ({ headerHight }) => {
 }
 
 export default Header
-
 const HeaderTopWrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: "center",
   justifyContent: 'space-between',
   padding: '8px 0',
 }));
-
-
-
