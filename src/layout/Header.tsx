@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({ headerHightId }) => {
+
   return (
-    <div>
+    <div id={headerHightId}>
       Header
     </div>
   )
