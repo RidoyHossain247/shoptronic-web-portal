@@ -1,7 +1,12 @@
 import { Box, Container, Typography, styled } from "@mui/material"
 import React from "react"
 
-const Footer = ({ footerHight }) => {
+
+interface iFooterProps {
+  footerHight: any
+}
+
+const Footer: React.FC<iFooterProps> = ({ footerHight }): JSX.Element => {
 
 
   return (

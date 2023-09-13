@@ -1,12 +1,16 @@
-import { Box } from "@mui/material"
-import React, { useEffect, useRef, useState } from "react"
-import Footer from "./Footer/Footer"
-import Header from "./Header/Header"
+import { Box } from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
+import Footer from "./Footer/Footer";
+import Header from "./Header/Header";
 
-const Layout = ({ children }: any) => {
+interface iLayoutProps {
+  children: any;
+}
 
-  const [headerHeight1, setHeaderHeight1] = useState(null)
-  const [footerHeight1, setfooterHeight1] = useState(null)
+const Layout: React.FC<iLayoutProps> = ({ children }): JSX.Element => {
+
+  const [headerHeight1, setHeaderHeight1] = useState(0)
+  const [footerHeight1, setfooterHeight1] = useState(0)
   const headerHight = useRef();
   const footerHight = useRef();
   useEffect(() => {
