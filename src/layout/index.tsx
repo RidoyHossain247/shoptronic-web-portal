@@ -5,12 +5,17 @@ import Header from './Header';
 
 interface iProps {
   children: any;
-  headerHight: any;
-  footerHight: any;
-  headerHightId: string;
-  footerHightId: string;
   headerOffsetHeight: number;
   footerOffsetHeight: number;
+
+  headerHightId: HTMLElement;
+  footerHightId: HTMLElement;
+
+  headerHight: number | undefined;
+  footerHight: number | undefined;
+
+
+
 }
 
 const Layout: React.FC<iProps> = ({ children }): JSX.Element => {
@@ -24,6 +29,7 @@ const Layout: React.FC<iProps> = ({ children }): JSX.Element => {
   useEffect(() => {
     const headerHight = document.getElementById(headerHightId)
     const footerHight = document.getElementById(footerHightId)
+
     setHeaderOffsetHeight(headerHight.offsetHeight)
     setFooterOffsetHeight(footerHight.offsetHeight)
   }, [])
