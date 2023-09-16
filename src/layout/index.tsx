@@ -1,29 +1,46 @@
-import { Box } from "@mui/material"
-import React, { useEffect, useRef, useState } from "react"
-import Footer from "./Footer/Footer"
-import Header from "./Header/Header"
+import { Box } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import Footer from './Footer';
+import Header from './Header';
 
-const Layout = ({ children }: any) => {
+interface iProps {
+  children: any;
+  headerOffsetHeight: number;
+  footerOffsetHeight: number;
 
-  const [headerHeight1, setHeaderHeight1] = useState(null)
-  const [footerHeight1, setfooterHeight1] = useState(null)
-  const headerHight = useRef();
-  const footerHight = useRef();
+  headerHightId: HTMLElement;
+  footerHightId: HTMLElement;
+
+  headerHight: number | undefined;
+  footerHight: number | undefined;
+
+
+
+}
+
+const Layout: React.FC<iProps> = ({ children }): JSX.Element => {
+
+  const [headerOffsetHeight, setHeaderOffsetHeight] = useState(0)
+  const [footerOffsetHeight, setFooterOffsetHeight] = useState(0)
+
+  const headerHightId = 'headerHightId'
+  const footerHightId = 'footerHightId'
+
   useEffect(() => {
-    setHeaderHeight1(headerHight.current.clientHeight);
-    setfooterHeight1(footerHight.current.clientHeight);
+    const headerHight = document.getElementById(headerHightId)
+    const footerHight = document.getElementById(footerHightId)
 
+    setHeaderOffsetHeight(headerHight.offsetHeight)
+    setFooterOffsetHeight(footerHight.offsetHeight)
   }, [])
-
-  const totalHeight = headerHeight1 + footerHeight1
 
   return (
     <>
-      <Header headerHight={headerHight} />
-      <Box minHeight={`calc(100vh - ${totalHeight}px )`}>
+      <Header headerHightId={headerHightId} />
+      <Box minHeight={`calc(100vh - ${headerOffsetHeight + footerOffsetHeight}px)`}>
         {children}
       </Box>
-      <Footer footerHight={footerHight} />
+      <Footer footerHightId={footerHightId} />
     </>
   )
 }

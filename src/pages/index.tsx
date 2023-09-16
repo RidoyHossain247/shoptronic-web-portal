@@ -1,5 +1,9 @@
-import { Box } from "@mui/material";
 import React from 'react';
+import TopCategory from "../components/TopCategory/TopCategory";
 export default function Page() {
-  return <Box>Home Page</Box>
+  return (
+    <>
+      <TopCategory />
+    </>
+  )
 }

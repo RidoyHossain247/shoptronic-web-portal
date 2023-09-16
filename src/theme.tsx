@@ -32,4 +32,78 @@ export const theme = createTheme({
       paper: "#f4f6fa",
     },
   },
+  typography: {
+    fontFamily: "Rubik, Poppins, sans-serif",
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
+    fontWeightBold: 700,
+
+    h1: {
+      fontFamily: "Rubik,sans-serif",
+      fontSize: "42px",
+      fontWeight: 500,
+      lineHeight: "48px",
+    },
+    h2: {
+      fontFamily: "Rubik,sans-serif",
+      fontSize: "35px",
+      fontWeight: 500,
+      lineHeight: "40px",
+    },
+    h3: {
+      fontFamily: "Rubik,sans-serif",
+      fontSize: "31px",
+      fontWeight: 500,
+      lineHeight: "36px",
+    },
+    h4: {
+      fontFamily: "Rubik,sans-serif",
+      fontSize: "28px",
+      fontWeight: 500,
+      lineHeight: "32px",
+    },
+    h5: {
+      fontFamily: "Rubik,sans-serif",
+      fontSize: "24px",
+      fontWeight: 500,
+      lineHeight: "28px",
+    },
+    h6: {
+      fontFamily: "Rubik,sans-serif",
+      fontSize: "21px",
+      fontWeight: 500,
+      lineHeight: "24px",
+    },
+    subtitle1: {
+      fontFamily: "Poppins, sans-serif",
+      fontSize: "21px",
+      fontWeight: 400,
+      lineHeight: "32px",
+    },
+    subtitle2: {
+      fontFamily: "Poppins, sans-serif",
+      fontSize: "17px",
+      fontWeight: 400,
+      lineHeight: "24px",
+    },
+    body1: {
+      fontFamily: "Poppins, sans-serif",
+      fontSize: "16px",
+      fontWeight: 400,
+      lineHeight: "20px",
+    },
+    body2: {
+      fontFamily: "Poppins, sans-serif",
+      fontSize: "14px",
+      fontWeight: 400,
+      lineHeight: "20px",
+    },
+    caption: {
+      fontFamily: "Poppins, sans-serif",
+      fontSize: "14px",
+      fontWeight: 400,
+      lineHeight: "10px",
+    },
+  },
 });
